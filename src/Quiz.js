@@ -238,13 +238,7 @@ export default function Quiz(props) {
         <button className="button-normal" onClick={handleSubmit}>
           {submitted ? "New Game" : "Submit Answers"}
         </button>
-        {submitted && (
-          <button className="score">
-            Score:
-            <br />
-            {score}/10
-          </button>
-        )}
+        {submitted && <button className="score">Score: {score}/10</button>}
       </div>
     </div>
   );
