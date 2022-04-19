@@ -18,15 +18,10 @@ export default function Question(props) {
 
   return (
     <div className="quiz-question">
-      <h3>
-        {question.question}
-      </h3>
-      <span
-        className="quiz-cat"
-        style={{ backgroundColor: question.catColor }}
-      >
+      <span className="quiz-cat" style={{ backgroundColor: question.catColor }}>
         {question.category}
       </span>
+      <h3>{question.question}</h3>
       <fieldset>{renderAnswers}</fieldset>
 
       <hr />
