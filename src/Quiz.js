@@ -61,16 +61,16 @@ export default function Quiz(props) {
     History: "#F5CBA7",
   };
 
+  //   function getAnswers(questionObj) {
+  //     let correctAnswer = [questionObj.correct_answer];
+  //     let allAnswers = questionObj.incorrect_answers;
+  //     allAnswers = allAnswers.concat(correctAnswer);
+  //     allAnswers = shuffle(allAnswers);
+
+  //     return allAnswers;
+  //   }
+
   React.useEffect(() => {
-    function getAnswers(questionObj) {
-      let correctAnswer = [questionObj.correct_answer];
-      let allAnswers = questionObj.incorrect_answers;
-      allAnswers = allAnswers.concat(correctAnswer);
-      allAnswers = shuffle(allAnswers);
-
-      return allAnswers;
-    }
-
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) =>
@@ -82,16 +82,23 @@ export default function Quiz(props) {
             questionId: nanoid(),
             question: he.decode(questionObj.question),
             catColor: catColors[questionObj.category],
-            answers: getAnswers(questionObj).map((answer) => ({
-              answerId: nanoid(),
-              answerLabel: he.decode(answer),
-              isChecked: false,
-              isCorrect: answer === questionObj.correct_answer ? true : false,
-            })),
+            answers: function () {
+              let correctAnswer = [questionObj.correct_answer];
+              let allAnswers = questionObj.incorrect_answers;
+              allAnswers = allAnswers.concat(correctAnswer);
+              allAnswers = shuffle(allAnswers);
+
+              return allAnswers.map((answer) => ({
+                answerId: nanoid(),
+                answerLabel: he.decode(answer),
+                isChecked: false,
+                isCorrect: answer === questionObj.correct_answer ? true : false,
+              }));
+            },
           }))
         )
       );
-  }, [difficulty, category, catColors, apiUrl, getAnswers]);
+  }, [difficulty, category, catColors, apiUrl]);
 
   // Function for setting answers checked, returns new answers object array.
   /* Params:
