@@ -81,7 +81,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   user-select: none;
   transition: background-color 0.25s;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .button-normal:hover {
