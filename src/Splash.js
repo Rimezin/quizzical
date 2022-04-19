@@ -51,7 +51,11 @@ export default function Splash(props) {
         Special thanks to the Scrimba Community
         <br />
         View on{" "}
-        <a href="https://github.com/Rimezin/quizzical" target="_blank">
+        <a
+          href="https://github.com/Rimezin/quizzical"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub
         </a>
       </span>
