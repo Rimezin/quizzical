@@ -30,21 +30,21 @@ export default function Quiz(props) {
     return array;
   }
 
-  //   function getAnswers(questionObj) {
-  //     let correctAnswer = [questionObj.correct_answer];
-  //     let allAnswers = questionObj.incorrect_answers;
-  //     allAnswers = allAnswers.concat(correctAnswer);
-  //     allAnswers = shuffle(allAnswers);
-
-  //     return allAnswers;
-  //   }
-
-  // Establish category colors
   React.useEffect(() => {
+    function getAnswers(questionObj) {
+      let correctAnswer = [questionObj.correct_answer];
+      let allAnswers = questionObj.incorrect_answers;
+      allAnswers = allAnswers.concat(correctAnswer);
+      allAnswers = shuffle(allAnswers);
+
+      return allAnswers;
+    }
+
     let getCategory = category === "any" ? "" : `&category=${category}`;
 
     const apiUrl = `https://opentdb.com/api.php?amount=10&difficulty=${difficulty}&type=multiple${getCategory}`;
 
+    // Establish category colors
     const catColors = {
       "Science: Computers": "#EDBB99",
       "Science: Gadgets": "#EDBB99",
@@ -83,19 +83,12 @@ export default function Quiz(props) {
             questionId: nanoid(),
             question: he.decode(questionObj.question),
             catColor: catColors[questionObj.category],
-            answers: function () {
-              let correctAnswer = [questionObj.correct_answer];
-              let allAnswers = questionObj.incorrect_answers;
-              allAnswers = allAnswers.concat(correctAnswer);
-              allAnswers = shuffle(allAnswers);
-
-              return allAnswers.map((answer) => ({
-                answerId: nanoid(),
-                answerLabel: he.decode(answer),
-                isChecked: false,
-                isCorrect: answer === questionObj.correct_answer ? true : false,
-              }));
-            },
+            answers: getAnswers(questionObj).map((answer) => ({
+              answerId: nanoid(),
+              answerLabel: he.decode(answer),
+              isChecked: false,
+              isCorrect: answer === questionObj.correct_answer ? true : false,
+            })),
           }))
         )
       );
