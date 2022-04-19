@@ -13,10 +13,15 @@ h2 {
   font-weight: 350;
   color: darkslateblue;
   font-size: 42px;
-  margin-left: 25px;
   margin: 0px 0px -5px 25px;
   text-align: center;
 }
+
+h3 {
+  font-weight: 350;
+  color: black;
+  font-size: 32px;
+  margin: 0px 10px 0px 10px;
 
 .alpha {
   opacity: 25%;
@@ -34,6 +39,7 @@ body {
   background-color: #dad8e7;
   width: 100%;
   border-radius: 20px;
+  user-select: none;
 }
 
 .container-condensed {
