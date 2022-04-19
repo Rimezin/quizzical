@@ -11,6 +11,7 @@ export default function Quiz(props) {
   const [score, setScore] = React.useState(0);
   const [error, setError] = React.useState("");
 
+  // This shuffle array function from coolaj86 on Stack Overflow.
   function shuffle(array) {
     let currentIndex = array.length,
       randomIndex;
@@ -30,6 +31,7 @@ export default function Quiz(props) {
     return array;
   }
 
+  // Main effect used to gather the questions.
   React.useEffect(() => {
     function getAnswers(questionObj) {
       let correctAnswer = [questionObj.correct_answer];
