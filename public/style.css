@@ -37,7 +37,7 @@ body {
 }
 
 .container-condensed {
-  width: 100%;
+  min-width: 350px;
   max-width: 400px;
   height: 500px;
   margin-top: 20%;
