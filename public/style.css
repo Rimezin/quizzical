@@ -1,188 +1,188 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
-    font-weight: 350;
-    color: darkslateblue;
-    font-size: 52px;
+  font-weight: 350;
+  color: darkslateblue;
+  font-size: 52px;
 }
 
 h2 {
-    font-weight: 350;
-    color: darkslateblue;
-    font-size: 42px;
-    margin-left: 25px;
-    margin: 0px 0px -5px 25px;
-    text-align: center;
+  font-weight: 350;
+  color: darkslateblue;
+  font-size: 42px;
+  margin-left: 25px;
+  margin: 0px 0px -5px 25px;
+  text-align: center;
 }
 
 .alpha {
-    opacity: 25%;
+  opacity: 25%;
 }
 
 body {
-    background-color: darkslateblue;
-    display: flex;
-    justify-content: center;
-    vertical-align: center;
+  background-color: darkslateblue;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
 }
 
-.container{
-    display: flex;
-    background-color: #DAD8E7;
-    width: 100%;
-    border-radius: 20px;
+.container {
+  display: flex;
+  background-color: #dad8e7;
+  width: 100%;
+  border-radius: 20px;
 }
 
-.container-condensed{
-    max-width: 350px;
-    height: 500px;
-    min-width: 400px;
-    margin-top: 20%;
-    margin-bottom: 20%;
+.container-condensed {
+  max-width: 350px;
+  height: 500px;
+  min-width: 400px;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 
-.container-auto{
-    height: auto;
-    width: 100%;
+.container-auto {
+  height: auto;
+  width: 100%;
 }
 
 .container-finish {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 40px;
-    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px;
+  display: flex;
 }
 
-.center{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.button-normal{
-    border: none;
-    width: 150px;
-    height: 50px;
-    border-radius: 8px;
-    background-color: darkslateblue;
-    color: white;
-    font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    user-select: none;
-    transition: background-color 0.25s;
+.button-normal {
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: darkslateblue;
+  color: white;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  transition: background-color 0.25s;
 }
 
-.button-normal:hover{
-    background-color: #766ea8;
+.button-normal:hover {
+  background-color: #766ea8;
 }
 
-.button-normal:focus{
-    outline: none;
+.button-normal:focus {
+  outline: none;
 }
 
-.button-normal:active{
-    outline: none;
+.button-normal:active {
+  outline: none;
 }
 
 .score {
-    margin-left: 10px;
-    border: none;
-    width: 75px;
-    height: 50px;
-    border-radius: 8px;
-    background-color: darkgray;
-    color: black;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: inset 0px 0px 8px gray;
-    pointer-events: none;
-    user-select: none;
+  margin-left: 10px;
+  border: none;
+  width: 75px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: darkgray;
+  color: black;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: inset 0px 0px 8px gray;
+  pointer-events: none;
+  user-select: none;
 }
 
 .small-text {
-    font-size: 12px;
-    font-weight: 250;
-    margin-top: 25%;
+  font-size: 12px;
+  font-weight: 250;
+  margin-top: 25%;
+  text-align: center;
 }
 
 select {
-    border: none;
-    width: 150px;
-    height: 30px;
-    border-radius: 8px;
-    text-indent: 10px;
-    margin: 10px;
-    background-color: darkslateblue;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    outline: none;
-    transition: background-color 0.25s;
+  border: none;
+  width: 150px;
+  height: 30px;
+  border-radius: 8px;
+  text-indent: 10px;
+  margin: 10px;
+  background-color: darkslateblue;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: background-color 0.25s;
 }
 
 select:hover {
-    background-color: #766ea8;
+  background-color: #766ea8;
 }
 
 .quiz-question {
-    margin: 5px;
-    background-color: #DAD8E7;
-    transition: background-color 0.25s;
+  margin: 5px;
+  background-color: #dad8e7;
+  transition: background-color 0.25s;
 }
 
-.quiz-question:hover{
-    background-color: #e1dfeb
+.quiz-question:hover {
+  background-color: #e1dfeb;
 }
 
 .quiz-cat {
-    font-size: 12px;
-    border: 1px solid darkgray;
-    border-radius: 8px;
-    background-color: lightgray;
-    color: gray;
-    margin-left: 8px;
-    padding: 3px;
+  font-size: 12px;
+  border: 1px solid darkgray;
+  border-radius: 8px;
+  background-color: lightgray;
+  color: gray;
+  margin-left: 8px;
+  padding: 3px;
 }
 
-.question-answer{
-    background: white;
-    margin: 5px;
-    padding: 8px;
-    display: inline-flex;
-    min-width: 100px;
-    justify-content: center;
-    border: 1px solid darkgray;
-    border-radius: 8px;
-    user-select: none;
-    box-shadow: 0px 1px 4px darkslateblue;
-    font-weight: 500;
-    transition: background 0.25s;
-    
+.question-answer {
+  background: white;
+  margin: 5px;
+  padding: 8px;
+  display: inline-flex;
+  min-width: 100px;
+  justify-content: center;
+  border: 1px solid darkgray;
+  border-radius: 8px;
+  user-select: none;
+  box-shadow: 0px 1px 4px darkslateblue;
+  font-weight: 500;
+  transition: background 0.25s;
 }
 
-.question-answer:hover{
-    color: darkslateblue;
-    background: linear-gradient(transparent, #A39EC5);
+.question-answer:hover {
+  color: darkslateblue;
+  background: linear-gradient(transparent, #a39ec5);
 }
 
-.question-answer:active{
-    box-shadow: inset 0px 0px 8px darkslateblue;
+.question-answer:active {
+  box-shadow: inset 0px 0px 8px darkslateblue;
 }
 
 fieldset {
-    border: none;
+  border: none;
 }
 
 .disabled {
-    user-select: none;
-    pointer-events: none;
-    opacity: 85%;
+  user-select: none;
+  pointer-events: none;
+  opacity: 85%;
 }
 
 hr {
-    border: 1px solid #A39EC5;
+  border: 1px solid #a39ec5;
 }
