@@ -1,50 +1,40 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import React from "react";
+import Quiz from "./Quiz";
+import Splash from "./Splash";
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
+export default function App() {
+  const [startQuiz, setStartQuiz] = React.useState(false);
+  const [difficulty, setDifficulty] = React.useState("easy");
+  const [category, setCategory] = React.useState("");
+
+  function clickStart(event) {
+    event.preventDefault();
+    setStartQuiz((startQuiz) => !startQuiz);
   }
 
-  handleClick = api => e => {
-    e.preventDefault()
-
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
+  function chooseDifficulty(event) {
+    setDifficulty(event.target.value.toLowerCase());
+  }
+  function chooseCategory(event) {
+    setCategory(event.target.value);
   }
 
-  render() {
-    const { loading, msg } = this.state
-
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
+  return (
+    <div>
+      {!startQuiz && (
+        <Splash
+          clickStart={clickStart}
+          chooseDifficulty={chooseDifficulty}
+          chooseCategory={chooseCategory}
+        />
+      )}
+      {startQuiz && (
+        <Quiz
+          difficulty={difficulty}
+          category={category}
+          setStartQuiz={setStartQuiz}
+        />
+      )}
+    </div>
+  );
 }
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
-  }
-}
-
-export default App
