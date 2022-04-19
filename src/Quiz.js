@@ -33,15 +33,6 @@ export default function Quiz(props) {
     return array;
   }
 
-  function getAnswers(questionObj) {
-    let correctAnswer = [questionObj.correct_answer];
-    let allAnswers = questionObj.incorrect_answers;
-    allAnswers = allAnswers.concat(correctAnswer);
-    allAnswers = shuffle(allAnswers);
-
-    return allAnswers;
-  }
-
   // Establish category colors
   const catColors = {
     "Science: Computers": "#EDBB99",
@@ -71,6 +62,15 @@ export default function Quiz(props) {
   };
 
   React.useEffect(() => {
+    function getAnswers(questionObj) {
+      let correctAnswer = [questionObj.correct_answer];
+      let allAnswers = questionObj.incorrect_answers;
+      allAnswers = allAnswers.concat(correctAnswer);
+      allAnswers = shuffle(allAnswers);
+
+      return allAnswers;
+    }
+
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) =>
