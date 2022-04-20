@@ -21,13 +21,13 @@ export default function App() {
   }
 
   // Set body element //
-  let bodyElement = document.getElementById("body");
+  // let bodyElement = document.getElementById("body");
 
-  if (dark) {
-    bodyElement.classList.add("body-dark");
-  } else {
-    bodyElement.classList.remove("body-dark");
-  }
+  // if (dark) {
+  //   bodyElement.classList.add("body-dark");
+  // } else {
+  //   bodyElement.classList.remove("body-dark");
+  // }
 
   function handleDark(event) {
     event.preventDefault();

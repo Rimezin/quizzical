@@ -51,14 +51,14 @@ body {
   transition: background-color 0.5s;
 }
 
-/* .body {
+.body {
   background-color: darkslateblue;
   display: flex;
   justify-content: center;
   vertical-align: middle;
   transition: background-color 0.5s;
   width: 100%;
-} */
+}
 
 .body-dark {
   background-color: #191632;
