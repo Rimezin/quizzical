@@ -20,14 +20,10 @@ export default function App() {
     setCategory(event.target.value);
   }
 
-  // Set body element //
-  // let bodyElement = document.getElementById("body");
-
-  // if (dark) {
-  //   bodyElement.classList.add("body-dark");
-  // } else {
-  //   bodyElement.classList.remove("body-dark");
-  // }
+  // Random click event to stimulate the logo animation //
+  React.useEffect(() => {
+    document.getElementsByTagName("body").click();
+  }, []);
 
   function handleDark(event) {
     event.preventDefault();
