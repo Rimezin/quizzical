@@ -6,7 +6,7 @@ export default function App() {
   const [startQuiz, setStartQuiz] = React.useState(false);
   const [difficulty, setDifficulty] = React.useState("easy");
   const [category, setCategory] = React.useState("");
-  const [dark, setDark] = React.useState(true);
+  const [dark, setDark] = React.useState(false);
 
   function clickStart(event) {
     event.preventDefault();
@@ -33,7 +33,7 @@ export default function App() {
           chooseDifficulty={chooseDifficulty}
           chooseCategory={chooseCategory}
           dark={dark}
-          setDark={handleDark}
+          handleDark={handleDark}
         />
       )}
       {startQuiz && (
@@ -42,7 +42,7 @@ export default function App() {
           category={category}
           setStartQuiz={setStartQuiz}
           dark={dark}
-          setDark={handleDark}
+          handleDark={handleDark}
         />
       )}
     </div>

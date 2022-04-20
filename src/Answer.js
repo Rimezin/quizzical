@@ -35,12 +35,10 @@ export default function Answer(props) {
   }
 
   function answerClass() {
-    let ansClass = dark
-      ? "question-answer question-answer-dark"
-      : "question-answer";
-    if (submitted) {
-      ansClass += " disabled";
-    }
+    let ansClass = "question-answer";
+    ansClass += dark ? " question-answer-dark" : "";
+    ansClass += submitted ? " disabled" : "";
+
     return ansClass;
   }
 
