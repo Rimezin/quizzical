@@ -21,7 +21,7 @@ export default function App() {
   }
 
   // Set body element //
-  let bodyElement = document.getElementsByTagName("body");
+  let bodyElement = document.getElementById("body");
 
   if (dark) {
     bodyElement.addClass("body-dark");
