@@ -6,7 +6,7 @@ export default function App() {
   const [startQuiz, setStartQuiz] = React.useState(false);
   const [difficulty, setDifficulty] = React.useState("easy");
   const [category, setCategory] = React.useState("");
-  const [dark, setDark] = React.useState(false);
+  const [dark, setDark] = React.useState(true);
 
   function clickStart(event) {
     event.preventDefault();

@@ -4,11 +4,13 @@ export default function Toggle(props) {
   const { toggleText, dark, handleDark } = props;
 
   return (
-    <div
-      className={dark ? "toggle toggle-dark" : "toggle"}
-      onClick={handleDark}
-    >
-      {toggleText}
+    <div>
+      <button
+        className={dark ? "toggle toggle-dark" : "toggle"}
+        onClick={handleDark}
+      >
+        {toggleText}
+      </button>
     </div>
   );
 }
