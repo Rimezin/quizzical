@@ -5,7 +5,7 @@ export default function Answer(props) {
 
   // Determine styling for answer //
   function setBackground() {
-    let bgColor;
+    let bgColor = "";
 
     if (!submitted) {
       // If not submitted, check for dark //
@@ -34,16 +34,13 @@ export default function Answer(props) {
     document.getElementById(answer.answerId).click();
   }
 
-  function answerClass() {
-    let ansClass = "question-answer";
-    ansClass += dark ? " question-answer-dark" : "";
-    ansClass += submitted ? " disabled" : "";
-
-    return ansClass;
-  }
+  // Set up answer class //
+  let ansClass = "question-answer";
+  ansClass += dark ? " question-answer-dark" : "";
+  ansClass += submitted ? " disabled" : "";
 
   return (
-    <div className={answerClass} style={answerStyling} onClick={handleClick}>
+    <div className={ansClass} style={answerStyling} onClick={handleClick}>
       <input
         value={answer.answerLabel}
         type="radio"

@@ -214,14 +214,14 @@ export default function Quiz(props) {
       className={dark ? "container container-dark" : "container"}
       style={quizStyles}
     >
-      <h2 className={dark ? "h2-dark" : ""}>
-        Quizzical <span className="alpha">({difficulty})</span>
-      </h2>
       <Toggle
         toggleText={dark ? "Light" : "Dark"}
         dark={dark}
         handleDark={handleDark}
       />
+      <h2 className={dark ? "h2-dark" : ""}>
+        Quizzical <span className="alpha">({difficulty})</span>
+      </h2>
       {renderQuestions}
       {error !== "" && (
         <span

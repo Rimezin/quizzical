@@ -18,6 +18,7 @@ export default function Splash(props) {
         dark={dark}
         handleDark={handleDark}
       />
+      <br />
       <h1 className={dark ? "h1-dark" : ""}>Quizzical</h1>
       <label htmlFor="difficultySelector">Choose your destiny:</label>
       <select
