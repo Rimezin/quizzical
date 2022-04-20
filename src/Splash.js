@@ -14,37 +14,35 @@ export default function Splash(props) {
       }
     >
       <svg
-        viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
         style={{
           position: "absolute",
           width: "200px",
-          left: "0px",
-          bottom: "0px",
+          left: "-20px",
+          bottom: "-10px",
           zIndex: "0",
         }}
       >
         <path
           className="blob"
-          fill={dark ? "#191632" : "#abc8bb"}
+          fill={dark ? "#466b50" : "#abc8bb"}
           d="M38.2,-46.1C48.7,-45,55.9,-32.7,54.2,-21.5C52.6,-10.2,42.1,0,37.4,11.5C32.7,22.9,33.9,35.5,28.6,47.6C23.3,59.6,11.7,71,-1.4,72.9C-14.4,74.8,-28.8,67.1,-33.2,54.8C-37.7,42.5,-32.2,25.6,-39.2,11.1C-46.2,-3.4,-65.7,-15.6,-70.9,-30.4C-76.2,-45.2,-67.2,-62.7,-53,-62.6C-38.8,-62.5,-19.4,-44.7,-2.8,-40.9C13.9,-37.1,27.7,-47.2,38.2,-46.1Z"
           transform="translate(100 100)"
         />
       </svg>
       <svg
-        viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
         style={{
           position: "absolute",
           width: "200px",
-          top: "0px",
-          right: "0px",
+          top: "-30px",
+          right: "-30px",
           zIndex: "0",
         }}
       >
         <path
           className="blob"
-          fill={dark ? "#191632" : "#c8abab"}
+          fill={dark ? "#6b4646" : "#c8abab"}
           d="M22.9,-33.4C30.8,-25.7,39.1,-20.6,46.3,-11.9C53.5,-3.2,59.6,9.1,57.2,19.3C54.9,29.5,44.2,37.8,33.2,47.6C22.3,57.5,11.1,68.9,3,64.8C-5.2,60.7,-10.3,41,-24,32C-37.6,23.1,-59.7,24.8,-67.4,18C-75,11.1,-68.2,-4.4,-60.1,-16.5C-52,-28.6,-42.6,-37.2,-32.4,-44.1C-22.2,-51,-11.1,-56.2,-1.8,-53.7C7.5,-51.2,15,-41.1,22.9,-33.4Z"
           transform="translate(100 100)"
         />
@@ -100,7 +98,10 @@ export default function Splash(props) {
       >
         Start Quiz
       </button>
-      <span className={dark ? "small-text small-text-dark" : "small-text"}>
+      <span
+        className={dark ? "small-text small-text-dark" : "small-text"}
+        style={{ zIndex: "1" }}
+      >
         Powered by Open Trivia API
         <br />
         Special thanks to the Scrimba Community
