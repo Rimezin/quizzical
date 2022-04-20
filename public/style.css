@@ -70,6 +70,7 @@ h3 {
   width: 100%;
   border-radius: 20px;
   user-select: none;
+  transition: background-color 0.5s;
 }
 
 .container-condensed {
@@ -129,7 +130,7 @@ h3 {
   outline: none;
 }
 
-.button-dark {
+.button-normal-dark {
   color: #aca7c8;
   background-color: #191632;
 }
@@ -148,6 +149,7 @@ h3 {
   pointer-events: none;
   user-select: none;
   font-size: 1.5em;
+  transition: background-color 0.5s;
 }
 
 .score-dark {
@@ -161,6 +163,8 @@ h3 {
   font-weight: 250;
   margin-top: 25%;
   text-align: center;
+  color: black;
+  transition: color 0.5s;
 }
 
 .small-text-dark {
@@ -212,6 +216,8 @@ select:hover {
   color: black;
   padding: 5px;
   font-weight: 500;
+  opacity: 100%;
+  transition: opacity 0.5s;
 }
 
 .quiz-cat-dark {
@@ -282,6 +288,7 @@ hr {
   font-weight: 500;
   float: right;
   margin: 10px 10px 10px 10px;
+  transition: color 0.5s;
 }
 
 .toggle-dark {
@@ -292,6 +299,7 @@ hr {
 .text {
   color: #191632;
   font-size: 14px;
+  transition: color 0.5s;
 }
 
 .text-dark {
