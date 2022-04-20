@@ -43,13 +43,13 @@ h3 {
   opacity: 25%;
 }
 
-body {
+/* body {
   background-color: darkslateblue;
   display: flex;
   justify-content: center;
   vertical-align: middle;
   transition: background-color 0.5s;
-}
+} */
 
 .body {
   background-color: darkslateblue;
@@ -76,7 +76,7 @@ body {
   min-width: 350px;
   max-width: 400px;
   height: 500px;
-  margin-top: 20%;
+  margin-top: 5%;
   margin-bottom: 20%;
 }
 
@@ -281,6 +281,7 @@ hr {
   padding: 5px;
   font-weight: 500;
   float: right;
+  margin: 10px 10px 10px 10px;
 }
 
 .toggle-dark {
