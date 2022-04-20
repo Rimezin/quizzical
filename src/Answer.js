@@ -41,6 +41,8 @@ export default function Answer(props) {
     if (submitted) {
       aClass += " disabled";
     }
+
+    return aClass;
   }
 
   return (
