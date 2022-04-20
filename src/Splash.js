@@ -20,7 +20,7 @@ export default function Splash(props) {
       />
       <br />
       <h1 className={dark ? "h1-dark" : ""}>Quizzical</h1>
-      <span className={dark ? "splash-text splash-text-dark" : "splash-text"}>
+      <span style={dark ? { color: "#aca7c8" } : { color: "#191632" }}>
         Choose your destiny:
       </span>
       <select

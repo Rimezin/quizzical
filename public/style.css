@@ -294,12 +294,7 @@ hr {
   border: 1px solid #aca7c8;
 }
 
-.text {
-  color: #191632;
+.splash-text {
   font-size: 14px;
   transition: color 0.5s;
-}
-
-.text-dark {
-  color: #aca7c8;
 }
