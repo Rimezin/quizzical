@@ -24,9 +24,9 @@ export default function App() {
   let bodyElement = document.getElementById("body");
 
   if (dark) {
-    bodyElement.addClass("body-dark");
+    bodyElement.classList.add("body-dark");
   } else {
-    bodyElement.removeClass("body-dark");
+    bodyElement.classList.remove("body-dark");
   }
 
   function handleDark(event) {
