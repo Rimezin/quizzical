@@ -42,6 +42,7 @@ export default function Answer(props) {
       aClass += " disabled";
     }
 
+    console.log(aClass);
     return aClass;
   }
 
