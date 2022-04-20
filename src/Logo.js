@@ -28,13 +28,11 @@ export default function Logo(props) {
       path.style["animation-delay"] = `${i * delay}s`;
     }
   }
-  setTextAnimation(0.1, 2.9, 2, "linear", strokeColor, false);
+  setTextAnimation(0.0, 2.9, 2, "linear", strokeColor, false);
 
   return (
     <svg
-      width="100%"
-      //   width="557.025"
-      //   height="107.878"
+      width="80%"
       viewBox="0 0 557.025 107.878"
       xmlns="http://www.w3.org/2000/svg"
     >
