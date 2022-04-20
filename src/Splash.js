@@ -20,7 +20,12 @@ export default function Splash(props) {
       />
       <br />
       <h1 className={dark ? "h1-dark" : ""}>Quizzical</h1>
-      <label htmlFor="difficultySelector">Choose your destiny:</label>
+      <label
+        htmlFor="difficultySelector"
+        className={dark ? "text text-dark" : "text"}
+      >
+        Choose your destiny:
+      </label>
       <select
         id="difficultySelector"
         onChange={(value) => chooseDifficulty(value)}

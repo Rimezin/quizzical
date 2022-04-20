@@ -26,8 +26,7 @@ export default function App() {
   }
 
   return (
-    <div>
-      <div className={dark ? "body body-dark" : "body"} />
+    <div className={dark ? "body body-dark" : "body"}>
       {!startQuiz && (
         <Splash
           clickStart={clickStart}
