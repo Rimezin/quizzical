@@ -71,6 +71,7 @@ h3 {
   border-radius: 20px;
   user-select: none;
   transition: background-color 0.5s;
+  position: relative;
 }
 
 .container-condensed {
