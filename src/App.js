@@ -22,7 +22,7 @@ export default function App() {
 
   function handleDark(event) {
     event.preventDefault();
-    setDark((dark) => !dark);
+    setDark(!dark);
   }
 
   return (
