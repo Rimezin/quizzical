@@ -337,5 +337,6 @@ hr {
 }
 
 .splash-logo {
-  transition: 0.5s;
+  user-select: none;
+  transition: fill 0.5s;
 }
