@@ -20,6 +20,16 @@ export default function App() {
     setCategory(event.target.value);
   }
 
+  React.useEffect(() => {
+    let bodyElement = document.getElementsByTagName("body");
+
+    if (dark) {
+      bodyElement.addClass("body-dark");
+    } else {
+      bodyElement.removeClass("body-dark");
+    }
+  }, [dark]);
+
   function handleDark(event) {
     event.preventDefault();
     setDark(!dark);
