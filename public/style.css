@@ -298,3 +298,7 @@ hr {
   font-size: 14px;
   transition: color 0.5s;
 }
+
+.blob {
+  transition: fill 0.5s;
+}
