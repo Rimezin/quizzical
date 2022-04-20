@@ -25,8 +25,19 @@ export default function Answer(props) {
     return bgColor;
   }
 
+  function setColor() {
+    if (submitted) {
+      return "black";
+    } else if (dark) {
+      return "#aca7c8";
+    } else {
+      return "black";
+    }
+  }
+
   const answerStyling = {
     backgroundColor: setBackground(),
+    color: setColor(),
   };
 
   // Function to simulate <input> click if user clicks outside of text
