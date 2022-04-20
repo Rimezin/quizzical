@@ -1,5 +1,6 @@
 import React from "react";
 import Toggle from "./Toggle";
+import Logo from "./Logo";
 
 export default function Splash(props) {
   const { clickStart, chooseDifficulty, chooseCategory, dark, handleDark } =
@@ -53,7 +54,8 @@ export default function Splash(props) {
         handleDark={handleDark}
       />
       <br />
-      <h1 className={dark ? "h1-dark" : ""}>Quizzical</h1>
+      <Logo />
+      {/* <h1 className={dark ? "h1-dark" : ""}>Quizzical</h1> */}
       <span style={dark ? { color: "#aca7c8" } : { color: "#191632" }}>
         Choose your destiny:
       </span>

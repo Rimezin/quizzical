@@ -8,6 +8,7 @@ h1 {
   color: darkslateblue;
   font-size: 52px;
   transition: color 0.5s;
+  font-family: "Jua", sans-serif;
 }
 
 .h1-dark {
@@ -16,7 +17,7 @@ h1 {
 
 h2 {
   font-weight: 350;
-  color: darkslateblue;
+  color: #483d8b;
   font-size: 42px;
   margin: 0px 0px -5px 25px;
   text-align: center;
@@ -302,4 +303,39 @@ hr {
 
 .blob {
   transition: fill 0.5s;
+}
+
+/* Google chrome */
+@-webkit-keyframes svg-text-anim {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #483d8b;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #483d8b;
+  }
+}
+/* Most browsers */
+@keyframes svg-text-anim {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #483d8b;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #483d8b;
+  }
+}
+
+.splash-logo {
+  transition: 0.5s;
 }
