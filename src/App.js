@@ -22,7 +22,7 @@ export default function App() {
 
   // Random click event to stimulate the logo animation //
   React.useEffect(() => {
-    document.getElementsByTagName("body").click();
+    document.querySelector("body").click();
   }, []);
 
   function handleDark(event) {
