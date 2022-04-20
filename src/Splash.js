@@ -1,11 +1,24 @@
 import React from "react";
+import Toggle from "./Toggle";
 
 export default function Splash(props) {
-  const { clickStart, chooseDifficulty, chooseCategory } = props;
+  const { clickStart, chooseDifficulty, chooseCategory, dark, handleDark } =
+    props;
 
   return (
-    <form className="container container-condensed center">
-      <h1>Quizzical</h1>
+    <form
+      className={
+        dark
+          ? "container container-dark container-condensed center"
+          : "container container-condensed center"
+      }
+    >
+      <Toggle
+        toggleText={dark ? "Light" : "Dark"}
+        dark={dark}
+        handleDark={handleDark}
+      />
+      <h1 className={dark ? "h1-dark" : ""}>Quizzical</h1>
       <label htmlFor="difficultySelector">Choose your destiny:</label>
       <select
         id="difficultySelector"
@@ -42,10 +55,13 @@ export default function Splash(props) {
         <option value="21">Sports</option>
         <option value="28">Vehicles</option>
       </select>
-      <button onClick={clickStart} className="button-normal">
+      <button
+        onClick={clickStart}
+        className={dark ? "button-normal button-normal-dark" : "button-normal"}
+      >
         Start Quiz
       </button>
-      <span className="small-text">
+      <span className={dark ? "small-text small-text-dark" : "small-text"}>
         Powered by Open Trivia API
         <br />
         Special thanks to the Scrimba Community

@@ -6,6 +6,7 @@ export default function App() {
   const [startQuiz, setStartQuiz] = React.useState(false);
   const [difficulty, setDifficulty] = React.useState("easy");
   const [category, setCategory] = React.useState("");
+  const [dark, setDark] = React.useState(false);
 
   function clickStart(event) {
     event.preventDefault();
@@ -19,13 +20,20 @@ export default function App() {
     setCategory(event.target.value);
   }
 
+  function handleDark(event) {
+    event.preventDefault();
+    setDark((dark) => !dark);
+  }
+
   return (
-    <div>
+    <div className={dark ? "body body-dark" : "body"}>
       {!startQuiz && (
         <Splash
           clickStart={clickStart}
           chooseDifficulty={chooseDifficulty}
           chooseCategory={chooseCategory}
+          dark={dark}
+          setDark={handleDark}
         />
       )}
       {startQuiz && (
@@ -33,6 +41,8 @@ export default function App() {
           difficulty={difficulty}
           category={category}
           setStartQuiz={setStartQuiz}
+          dark={dark}
+          setDark={handleDark}
         />
       )}
     </div>

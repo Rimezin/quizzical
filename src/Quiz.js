@@ -2,9 +2,10 @@ import React from "react";
 import Question from "./Question";
 import { nanoid } from "nanoid";
 import he from "he";
+import Toggle from "./Toggle";
 
 export default function Quiz(props) {
-  const { difficulty, category, setStartQuiz } = props;
+  const { difficulty, category, setStartQuiz, dark, handleDark } = props;
 
   const [questions, setQuestions] = React.useState([]);
   const [submitted, setSubmitted] = React.useState(false);
@@ -116,16 +117,6 @@ export default function Quiz(props) {
     });
   }
 
-  // Function for determining if question has a selected answer. Returns boolean
-  // function checkIfAnswered(questionObj) {
-  //     let imAnswered = false;
-  //     for(let i=0; i < questionObj.answers.length; i++) {
-  //         let ans = questionObj.answers[i]
-  //         imAnswered = (ans.isChecked) ? true : imAnswered;
-  //     }
-  //     return imAnswered;
-  // }
-
   // Function for checking if the selected answer is correct. Returns boolean
   function scoreQuestion(questionObj) {
     let myScore = false;
@@ -208,6 +199,7 @@ export default function Quiz(props) {
         answers={question.answers}
         handleChange={handleChange}
         submitted={submitted}
+        dark={dark}
       />
     );
   });
@@ -218,10 +210,18 @@ export default function Quiz(props) {
   };
 
   return (
-    <div className="container" style={quizStyles}>
-      <h2>
+    <div
+      className={dark ? "container container-dark" : "container"}
+      style={quizStyles}
+    >
+      <h2 className={dark ? "h2-dark" : ""}>
         Quizzical <span className="alpha">({difficulty})</span>
       </h2>
+      <Toggle
+        toggleText={dark ? "Light" : "Dark"}
+        dark={dark}
+        handleDark={handleDark}
+      />
       {renderQuestions}
       {error !== "" && (
         <span
@@ -235,24 +235,20 @@ export default function Quiz(props) {
         </span>
       )}
       <div className="container-finish">
-        <button className="button-normal" onClick={handleSubmit}>
+        <button
+          className={
+            dark ? "button-normal button-normal-dark" : "button-normal"
+          }
+          onClick={handleSubmit}
+        >
           {submitted ? "New Game" : "Submit Answers"}
         </button>
-        {submitted && <button className="score">Score: {score}/10</button>}
+        {submitted && (
+          <button className={dark ? "score score-dark" : "score"}>
+            Score: {score}/10
+          </button>
+        )}
       </div>
     </div>
   );
 }
-
-/*
-[
-    {
-        category: "General Knowledge",
-        type: "multiple",
-        difficulty: "easy",
-        question: "In past times, what would a gentleman keep in his fob pocket?",
-        correct_answer: "Watch",
-        incorrect_answers: ["Money", "Keys", "Notebook"]
-    }
-]
-*/
