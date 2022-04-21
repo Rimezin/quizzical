@@ -1,6 +1,6 @@
 import React from "react";
 import Toggle from "./Toggle";
-import Logo from "./Logo";
+// import Logo from "./Logo";
 
 export default function Splash(props) {
   const { clickStart, chooseDifficulty, chooseCategory, dark, handleDark } =
@@ -14,7 +14,7 @@ export default function Splash(props) {
           : "container container-condensed center"
       }
     >
-      {/* <svg
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         style={{
           position: "absolute",
@@ -47,15 +47,15 @@ export default function Splash(props) {
           d="M22.9,-33.4C30.8,-25.7,39.1,-20.6,46.3,-11.9C53.5,-3.2,59.6,9.1,57.2,19.3C54.9,29.5,44.2,37.8,33.2,47.6C22.3,57.5,11.1,68.9,3,64.8C-5.2,60.7,-10.3,41,-24,32C-37.6,23.1,-59.7,24.8,-67.4,18C-75,11.1,-68.2,-4.4,-60.1,-16.5C-52,-28.6,-42.6,-37.2,-32.4,-44.1C-22.2,-51,-11.1,-56.2,-1.8,-53.7C7.5,-51.2,15,-41.1,22.9,-33.4Z"
           transform="translate(100 100)"
         />
-      </svg> */}
+      </svg>
       <Toggle
         toggleText={dark ? "Light" : "Dark"}
         dark={dark}
         handleDark={handleDark}
       />
       <br />
-      <Logo />
-      {/* <h1 className={dark ? "h1-dark" : ""}>Quizzical</h1> */}
+      {/* <Logo /> */}
+      <h1 className={dark ? "h1-dark" : ""}>Quizzical</h1>
       <span style={dark ? { color: "#aca7c8" } : { color: "#191632" }}>
         Choose your destiny:
       </span>
