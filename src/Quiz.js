@@ -5,7 +5,15 @@ import he from "he";
 import Toggle from "./Toggle";
 
 export default function Quiz(props) {
-  const { difficulty, category, setStartQuiz, dark, handleDark } = props;
+  const {
+    difficulty,
+    category,
+    setStartQuiz,
+    dark,
+    handleDark,
+    setDifficulty,
+    setCategory,
+  } = props;
 
   const [questions, setQuestions] = React.useState([]);
   const [submitted, setSubmitted] = React.useState(false);
@@ -185,10 +193,20 @@ export default function Quiz(props) {
       }
     } else {
       // If submitted, reset the game.
+      setDifficulty("");
+      setCategory("");
       setSubmitted(false);
       setScore(0);
       setStartQuiz(false);
     }
+  }
+
+  function handleReset() {
+    setDifficulty("");
+    setCategory("");
+    setSubmitted(false);
+    setScore(0);
+    setStartQuiz(false);
   }
 
   const renderQuestions = questions.map((question) => {
@@ -235,6 +253,14 @@ export default function Quiz(props) {
         </span>
       )}
       <div className="container-finish">
+        {!submitted && (
+          <button
+            className={dark ? "button-lite button-lite-dark" : "button-lite"}
+            onClick={handleReset}
+          >
+            Reset
+          </button>
+        )}
         <button
           className={
             dark ? "button-normal button-normal-dark" : "button-normal"

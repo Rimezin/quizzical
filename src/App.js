@@ -43,6 +43,8 @@ export default function App() {
           setStartQuiz={setStartQuiz}
           dark={dark}
           handleDark={handleDark}
+          setDifficulty={setDifficulty}
+          setCategory={setCategory}
         />
       )}
     </div>
