@@ -66,10 +66,14 @@ export default function Logo(props) {
         stroke-linecap="round"
         fill-rule="evenodd"
         font-size="9pt"
-        stroke="#000"
+        stroke={dark ? "#aca7c8" : "#483d8b"}
         stroke-width="0.25mm"
         fill="none"
-        style={{ stroke: "#000", strokeWidth: "0.25mm", fill: "none" }}
+        style={{
+          stroke: dark ? "#aca7c8" : "#483d8b",
+          strokeWidth: "0.25mm",
+          fill: "none",
+        }}
       >
         {pathElements}
       </g>
