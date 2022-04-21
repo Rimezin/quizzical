@@ -16,6 +16,7 @@ export default function Splash(props) {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 200 200"
         style={{
           position: "absolute",
           width: "200px",
@@ -33,6 +34,7 @@ export default function Splash(props) {
       </svg>
       <svg
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 200 200"
         style={{
           position: "absolute",
           width: "200px",

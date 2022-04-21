@@ -6,9 +6,10 @@
 h1 {
   font-weight: 500;
   color: darkslateblue;
-  font-size: 52px;
+  font-size: 64px;
   transition: color 0.5s;
   font-family: "Jua", sans-serif;
+  z-index: 999;
 }
 
 .h1-dark {
