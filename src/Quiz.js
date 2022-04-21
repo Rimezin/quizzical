@@ -238,8 +238,8 @@ export default function Quiz(props) {
         handleDark={handleDark}
       />
       <h2 className={dark ? "h2-dark" : ""}>
-        Quizzical{" "}
-        <span className="alpha" style={{ fontSize: "48px" }}>
+        Quizzical <br />
+        <span className="alpha" style={{ fontSize: "32px" }}>
           ({difficulty})
         </span>
       </h2>

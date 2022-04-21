@@ -80,7 +80,7 @@ h3 {
 .container-condensed {
   min-width: 350px;
   max-width: 400px;
-  height: 500px;
+  height: 550px;
   margin-top: 5%;
   margin-bottom: 20%;
 }
@@ -319,7 +319,7 @@ hr {
   font-size: 14px;
   border: 1px solid #191632;
   border-radius: 8px;
-  background-image: linear-gradient(transparent, transparent);
+  background-color: transparent;
   padding: 5px;
   font-weight: 500;
   float: right;
