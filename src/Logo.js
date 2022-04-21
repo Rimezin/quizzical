@@ -1,38 +1,11 @@
 import React from "react";
 
-export default function Logo(props) {
-  const { dark } = props;
-
-  let strokeColor = dark ? "#aca7c8" : "#483d8b";
-
-  function setTextAnimation(
-    delay,
-    duration,
-    strokeWidth,
-    timingFunction,
-    strokeColor,
-    repeat
-  ) {
-    let paths = document.querySelectorAll(".splash-logo");
-    let mode = repeat ? "infinite" : "forwards";
-    for (let i = 0; i < paths.length; i++) {
-      const path = paths[i];
-      const length = path.getTotalLength();
-      path.style["stroke-dashoffset"] = `${length}px`;
-      path.style["stroke-dasharray"] = `${length}px`;
-      path.style["stroke-width"] = `${strokeWidth}px`;
-      path.style["stroke"] = `${strokeColor}`;
-      path.style[
-        "animation"
-      ] = `${duration}s svg-text-anim ${mode} ${timingFunction}`;
-      path.style["animation-delay"] = `${i * delay}s`;
-    }
-  }
-  setTextAnimation(0.0, 2.9, 2, "linear", strokeColor, false);
+export default function Logo() {
+  //const { dark } = props;
 
   return (
     <svg
-      width="80%"
+      width="60%"
       viewBox="0 0 557.025 107.878"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -4,7 +4,7 @@
 }
 
 h1 {
-  font-weight: 350;
+  font-weight: 500;
   color: darkslateblue;
   font-size: 52px;
   transition: color 0.5s;
@@ -16,12 +16,13 @@ h1 {
 }
 
 h2 {
-  font-weight: 350;
+  font-weight: 500;
   color: #483d8b;
   font-size: 42px;
   margin: 0px 0px -5px 25px;
   text-align: center;
   transition: color 0.5s;
+  font-family: "Jua", sans-serif;
 }
 
 .h2-dark {
