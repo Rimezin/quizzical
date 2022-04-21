@@ -6,8 +6,8 @@ export default function Logo() {
   return (
     <svg
       width="60%"
-      viewBox="0 0 557.025 107.878"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ padding: "10px" }}
     >
       <g
         id="svgGroup"

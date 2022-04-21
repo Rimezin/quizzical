@@ -314,11 +314,11 @@ hr {
   }
   60% {
     stroke-dashoffset: 0;
-    fill: #483d8b;
+    /* fill: #483d8b; */
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #483d8b;
+    /* fill: #483d8b; */
   }
 }
 /* Most browsers */
@@ -329,11 +329,11 @@ hr {
   }
   60% {
     stroke-dashoffset: 0;
-    fill: #483d8b;
+    /* fill: #483d8b; */
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #483d8b;
+    /* fill: #483d8b; */
   }
 }
 

@@ -18,7 +18,7 @@ export default function App() {
       path.style["stroke-dasharray"] = `${length}px`;
       path.style["stroke-width"] = `2px`;
       path.style["stroke"] = dark ? "#aca7c8" : "#483d8b";
-      path.style["animation"] = `2.9s svg-text-anim forwards linear`;
+      path.style["animation"] = `2.9s svg-text-anim infinite linear`;
       path.style["animation-delay"] = `${i * 0.1}s`;
     }
   }
