@@ -193,7 +193,7 @@ export default function Quiz(props) {
       }
     } else {
       // If submitted, reset the game.
-      setDifficulty("");
+      setDifficulty("easy");
       setCategory("");
       setSubmitted(false);
       setScore(0);
@@ -202,7 +202,7 @@ export default function Quiz(props) {
   }
 
   function handleReset() {
-    setDifficulty("");
+    setDifficulty("easy");
     setCategory("");
     setSubmitted(false);
     setScore(0);
@@ -238,7 +238,10 @@ export default function Quiz(props) {
         handleDark={handleDark}
       />
       <h2 className={dark ? "h2-dark" : ""}>
-        Quizzical <span className="alpha">({difficulty})</span>
+        Quizzical{" "}
+        <span className="alpha" style={{ fontSize: "48px" }}>
+          ({difficulty})
+        </span>
       </h2>
       {renderQuestions}
       {error !== "" && (

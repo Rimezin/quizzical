@@ -120,6 +120,7 @@ h3 {
   user-select: none;
   transition: background-color 0.25s;
   font-size: 1.25em;
+  margin: 0px 5px 0px 5px;
 }
 
 .button-normal:hover {
@@ -151,6 +152,7 @@ h3 {
   user-select: none;
   transition: background-color 0.25s;
   font-size: 1.25em;
+  margin: 0px 5px 0px 5px;
 }
 
 .button-lite:hover {
@@ -317,12 +319,21 @@ hr {
   font-size: 14px;
   border: 1px solid #191632;
   border-radius: 8px;
-  background-color: transparent;
+  background-image: linear-gradient(transparent, transparent);
   padding: 5px;
   font-weight: 500;
   float: right;
   margin: 10px 10px 10px 10px;
-  transition: color 0.5s;
+  transition: 0.5s;
+}
+
+.toggle:hover {
+  background-image: linear-gradient(transparent, rgba(72, 61, 140, 0.5));
+}
+
+.toggle:active {
+  background-color: rgb(72, 61, 140);
+  box-shadow: inset 0px 0px 3px black;
 }
 
 .toggle-dark {
