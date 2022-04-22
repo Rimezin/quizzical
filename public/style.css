@@ -177,7 +177,7 @@ h3 {
   margin-left: 10px;
   border: none;
   width: auto;
-  height: 50px;
+  min-height: 50px;
   border-radius: 8px;
   background-color: darkgray;
   color: black;
