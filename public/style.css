@@ -111,7 +111,7 @@ h3 {
 .button-normal {
   border: none;
   min-width: 150px;
-  height: 50px;
+  min-height: 50px;
   border-radius: 8px;
   background-color: darkslateblue;
   color: white;
@@ -143,7 +143,7 @@ h3 {
 .button-lite {
   border: 1px solid #2d2a4c;
   min-width: 150px;
-  height: 50px;
+  min-height: 50px;
   border-radius: 8px;
   background-color: transparent;
   color: #2d2a4c;
@@ -325,6 +325,7 @@ hr {
   float: right;
   margin: 10px 10px 10px 10px;
   transition: 0.5s;
+  position: sticky;
 }
 
 .toggle:hover {
